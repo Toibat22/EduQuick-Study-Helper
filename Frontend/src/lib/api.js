@@ -3,13 +3,17 @@ const BASE = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000";
 
 async function request(path, body) {
   try {
+    const token = localStorage.getItem("token");
+
     const res = await fetch(`${BASE}${path}`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        ...(token ? { Authorization: `Bearer ${token}` } : {})
+      },
       body: JSON.stringify(body),
     });
 
-    // If server returned HTML (like 404 page), trying to parse JSON will fail.
     const text = await res.text();
     try {
       const data = JSON.parse(text);
@@ -25,6 +29,7 @@ async function request(path, body) {
     throw err;
   }
 }
+
 
 // ---------------- Auth Functions ----------------
 export async function signUp(email, password, fullName) {

@@ -22,7 +22,7 @@ export default function Homework() {
     try {
       setLoading(true);
 
-      const res = await fetch("http://localhost:5000/api/study/homework", {
+      const res = await fetch("https://eduquick-study-helper.onrender.com/api/study/homework", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

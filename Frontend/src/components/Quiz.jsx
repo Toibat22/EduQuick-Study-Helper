@@ -20,7 +20,7 @@ export default function Quiz() {
     try {
       setLoading(true);
 
-      const res = await fetch("http://localhost:5000/api/study/quiz", {
+      const res = await fetch("https://eduquick-study-helper.onrender.com/study/quiz", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
