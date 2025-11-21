@@ -4,9 +4,10 @@ A study assistant that helps students learn faster by automatically generating s
 
 ## 🚀 Live Demo
 
-Frontend: EduQuick – Study Helper
+- **Frontend:** [EduQuick – Study Helper](https://eduquick-study-helper-1.onrender.com) 
 
-Backend API: EduQuick Backend
+- **Backend API:** [EduQuick Backend](https://eduquick-study-helper.onrender.com)
+
 
 ## 📌 About the Project
 
@@ -18,7 +19,7 @@ With EduQuick, users can:
 
 ✔ Generate quiz questions from any content
 
-✔ Get step-by-step homework help
+✔ Get homework help
 
 ✔ Sign up & log in securely
 
